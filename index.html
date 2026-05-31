@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oluwatobi Adetomiwa — Software & AI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">OA<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#n8n">N8N</a></li>
+        <li><a href="#certifications">Certs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="icon-sun">☀</span>
+        <span class="icon-moon">◑</span>
+      </button>
+      <button class="nav-burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#n8n" class="mobile-link">N8N</a></li>
+      <li><a href="#certifications" class="mobile-link">Certs</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">Available for opportunities</div>
+      <h1 class="hero-name reveal-up delay-1">
+        Oluwatobi<br/><span class="accent">Adetomiwa</span>
+      </h1>
+      <div class="hero-roles reveal-up delay-2">
+        <span class="role-tag">Software Engineer</span>
+        <span class="role-divider">·</span>
+        <span class="role-tag">AI Engineer</span>
+        <span class="role-divider">·</span>
+        <span class="role-tag">System Designer</span>
+        <span class="role-divider">·</span>
+        <span class="role-tag">Startup Founder</span>
+      </div>
+      <p class="hero-tagline reveal-up delay-3">
+        Building intelligent systems that shape the future — one product at a time.
+      </p>
+      <div class="hero-cta reveal-up delay-4">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal-right delay-2">
+      <div class="hero-img-frame">
+  
+          <!-- Image -->
+          <img src="images/WhatsApp Image 2025-07-17 at 07.35.09.jpeg" alt="Hero Image" class="hero-image">
+  
+          <div class="hero-img-deco deco-1"></div>
+          <div class="hero-img-deco deco-2"></div>
+      </div>
+  </div>
+  
+  <div class="scroll-hint reveal-up delay-5">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+  </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label reveal-up">About Me</div>
+      <div class="about-grid">
+        <div class="about-text reveal-up delay-1">
+          <h2 class="section-title">Visionary builder.<br/>Relentless problem solver.</h2>
+          <p>I'm Oluwatobi, a Software & AI Engineer with a B.Sc. in Information Technology from the <strong>University of Ilorin (Unilorin)</strong>. I specialize in crafting intelligent, scalable products that sit at the intersection of engineering and business impact.</p>
+          <p>As a startup founder, I approach every project with a systems-thinking mindset — designing for reliability, growth, and real-world results. I work across the full stack, AI pipelines, and automation workflows.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num" data-target="10">0</span><span class="stat-num">+</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="5">0</span><span class="stat-num">+</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="3">0</span><span class="stat-num">+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-skills reveal-up delay-2">
+          <div class="skills-card">
+            <h3>Tech Stack</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Next.js</span>
+              <span class="skill-tag">FastAPI</span>
+              <span class="skill-tag">LangChain</span>
+              <span class="skill-tag">OpenAI API</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">AWS</span>
+              <span class="skill-tag">N8N</span>
+              <span class="skill-tag">System Design</span>
+            </div>
+          </div>
+          <div class="skills-card">
+            <h3>Focus Areas</h3>
+            <ul class="focus-list">
+              <li><span class="focus-icon">◈</span> AI & Machine Learning Integration</li>
+              <li><span class="focus-icon">◈</span> Full-Stack Product Development</li>
+              <li><span class="focus-icon">◈</span> Workflow Automation (N8N)</li>
+              <li><span class="focus-icon">◈</span> Startup Architecture & Scaling</li>
+              <li><span class="focus-icon">◈</span> System Design & Engineering</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-label reveal-up">Web Applications</div>
+      <h2 class="section-title reveal-up delay-1">Things I've Built</h2>
+      <p class="section-sub reveal-up delay-2">A collection of web applications, products, and experiments.</p>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- PROJECT CARD 1 -->
+        <article class="project-card reveal-up delay-1" data-index="1">
+          <div class="project-media">
+            <video class="project-video" autoplay muted loop playsinline>
+              <source src="videos/afritravel.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="proj-link-btn" title="Live Demo">↗ Live</a>
+                <button class="proj-link-btn video-trigger" data-video="videos/afritravel.mp4" title="Watch Demo">▶ Demo</button>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-num">01</div>
+            <h3 class="project-title">AfriTravel</h3>
+            <p class="project-desc">A full luxury travel agency website and it's for sale. 🌍✈️
+
+              Meet AfriTravel. A premium, client-ready website built for any travel agency looking to show up online like they mean business.
+              
+              What's included:
+              🔥 Stunning luxury design with animations
+              📋 Services, Destinations, About & Quote pages
+              📩 Quote form that sends enquiries straight to Instagram DM
+              🖥️ Custom content dashboard — no developer needed
+              📱 Fully mobile responsive
+              </p>
+            <div class="project-tags">
+              <span>React</span><span>Node.js</span><span>AI</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT CARD 2 -->
+        <article class="project-card reveal-up delay-2" data-index="2">
+          <div class="project-media">
+            
+            <!-- Video -->
+            <video class="project-video" autoplay muted loop playsinline>
+              <source src="videos/palyk.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="proj-link-btn" title="Live Demo">↗ Live</a>
+                <button class="proj-link-btn video-trigger" data-video="videos/palyk.mp4" title="Watch Demo">▶ Demo</button>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-num">02</div>
+            <h3 class="project-title">A modern car sales platform </h3>
+            <p class="project-desc">A modern car sales platform built for a client using Django, designed to streamline the process of listing, managing, and selling vehicles online. The system includes a powerful admin dashboard that allows the client to easily upload new car listings, update existing information, manage pricing, and control availability in real time.
+
+              The platform also integrates direct WhatsApp messaging, enabling potential buyers to instantly contact the seller for enquiries without friction, significantly improving response time and customer engagement. With a clean, responsive interface and an intuitive backend system, the platform is optimized for both ease of use and performance.
+              
+              Overall, the solution not only simplifies vehicle management but also enhances customer interaction and boosts sales efficiency through seamless digital communication.</p>
+            <div class="project-tags">
+              <span>Python</span><span>FastAPI</span><span>PostgreSQL</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT CARD 3 -->
+        <article class="project-card reveal-up delay-3" data-index="3">
+          <div class="project-media">
+        
+            <!-- Video -->
+            <video class="project-video" autoplay muted loop playsinline>
+              <source src="videos/LOGIQO MARKETPLACE.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+        
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="proj-link-btn" title="Live Demo">↗ Live</a>
+                <button class="proj-link-btn video-trigger"
+                  data-video="videos/LOGIQO MARKETPLACE.mp4"
+                  title="Watch Demo">
+                  ▶ Demo
+                </button>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="project-info">
+            <div class="project-num">03</div>
+            <h3 class="project-title">LogiCo</h3>
+            <p class="project-desc">
+              Logiqo is an end-to-end e-commerces platform fully integrated with logistics and delivery management platform designed
+              to bridge the gap between e-commerce and last-mile delivery and in built payment System
+            </p>
+        
+            <div class="project-tags">
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>AWS</span>
+            </div>
+          </div>
+        </article>
+        </article>
+
+        <!-- PROJECT CARD 4 -->
+        <article class="project-card reveal-up delay-1" data-index="4">
+          <div class="project-media">
+            <!-- Video -->
+            <video class="project-video" autoplay muted loop playsinline>
+              <source src="videos/revelflow build.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="proj-link-btn" title="Live Demo">↗ Live</a>
+                <button class="proj-link-btn video-trigger" data-video="videos/revelflow build.mp4" title="Watch Demo">▶ Demo</button>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-num">04</div>
+            <h3 class="project-title">Revelflow</h3>
+            <p class="project-desc"></p>Revel Flow is building the operating system for the African event economy.
+
+            Connecting event planners to trusted vendors like photographers, videographers, DJs, live bands, caterers, decorators, MCs, makeup artists, ushers, rental services, and more all in one structured system.
+            
+            It is 3 things in one
+            • A social layer to discover and showcase talent
+            • A workflow engine to run entire events in one place
+            • An AI layer to plan, budget, and match vendors intelligently
+            </p>
+            <div class="project-tags">
+              <span>LangChain</span><span>OpenAI</span><span>MongoDB</span>
+            </div>
+          </div>
+        </article>
+
+         <!-- PROJECT CARD 5-->
+         <article class="project-card reveal-up delay-1" data-index="4">
+          <div class="project-media">
+            <!-- Video -->
+            <video class="project-video" autoplay muted loop playsinline>
+              <source src="videos/men1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="proj-link-btn" title="Live Demo">↗ Live</a>
+                <button class="proj-link-btn video-trigger" data-video="videos/men1.mp4" title="Watch Demo">▶ Demo</button>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-num">05</div>
+            <h3 class="project-title">Dexlicious</h3>
+            <p class="project-desc"></p>Dexlicious is a digital food ordering system built with the Django framework that modernizes the restaurant experience by making ordering fast, simple, and contactless.
+
+            Customers can scan a QR code at their table to instantly access the restaurant menu, place orders, customize meals, and track their food in real time directly from their phones. Once an order is placed, it is sent to the restaurant dashboard where staff can manage and update its status from preparation to delivery.
+            
+            The system reduces waiting time, eliminates order errors, and improves communication between customers, waiters, and kitchen staff. Restaurant owners can also easily manage menus, update items, and control availability through an admin panel.
+            
+            Overall, Dexlicious helps restaurants run more efficiently while giving customers a smooth and convenient dining experience.
+            </p>
+            <div class="project-tags">
+              <span>LangChain</span><span>OpenAI</span><span>MongoDB</span>
+            </div>
+          </div>
+        </article>
+
+         <!-- PROJECT CARD 7 -->
+         <article class="project-card reveal-up delay-1" data-index="4">
+          <div class="project-media">
+            <!-- Video -->
+            <video class="project-video" autoplay muted loop playsinline>
+              <source src="videos/FEASTFLOW VID.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="proj-link-btn" title="Live Demo">↗ Live</a>
+                <button class="proj-link-btn video-trigger" data-video="videos/FEASTFLOW VID.mp4" title="Watch Demo">▶ Demo</button>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-num">04</div>
+            <h3 class="project-title">FEASTFLOW</h3>
+            <p class="project-desc"></p>feastflow The Ultimate Social Networking & Event Planning Platform 
+
+            🚀 Bridging the Gap Between Event Planners, Vendors, and Clients!
+            
+            I’m excited to introduce FeastFlow, a dynamic social networking and event planning platform designed to revolutionize the way people plan and manage events. Whether you're an event planner, caterer, decorator, photographer, or simply someone organizing an event, FeastFlow provides the perfect ecosystem to connect, collaborate, and create seamless event experiences.
+            </p>
+            <div class="project-tags">
+              <span>LangChain</span><span>OpenAI</span><span>MongoDB</span>
+            </div>
+          </div>
+        </article>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- N8N PROJECTS -->
+  <section class="n8n section" id="n8n">
+    <div class="container">
+      <div class="section-label reveal-up">Automation</div>
+      <h2 class="section-title reveal-up delay-1">N8N Workflows</h2>
+      <p class="section-sub reveal-up delay-2">Intelligent automation pipelines built with N8N — connecting systems, eliminating manual work.</p>
+
+      <div class="n8n-grid" id="n8nGrid">
+
+        <!-- N8N CARD 1 -->
+          <article class="n8n-card reveal-up delay-1">
+            <div class="n8n-media">
+
+              <!-- IMAGE ADDED HERE -->
+              <img src="images/Screenshot 2025-08-26 092236.png" alt="Workflow preview" class="n8n-img" />
+
+              <div class="n8n-overlay">
+                <button class="proj-link-btn video-trigger" data-video="n8n-video-1.mp4">
+                  ▶ Watch Flow
+                </button>
+              </div>
+
+            </div>
+
+            <div class="n8n-info">
+              <div class="n8n-badge">N8N Workflow</div>
+              <h3>AI Job Application Assistant</h3>
+              <p>
+                An intelligent AI agent designed to help you automatically filter emails and track your job applications with ease. It’s a real game-changer for anyone actively applying to jobs or managing multiple applications at once.
+
+The system automatically organizes incoming job-related emails and classifies them into categories such as application submissions, interview invitations, and recruiter updates. It also keeps track of important email IDs and conversations, ensuring you never miss a follow-up or opportunity.
+
+By automating the most time-consuming parts of the job search process, this AI agent helps you stay organized, reduces stress, and improves your chances of landing the right role by keeping everything structured and easy to manage.</p>
+              <div class="n8n-nodes">
+                <span>Webhook</span><span>OpenAI</span><span>Slack</span><span>Gmail</span>
+              </div>
+            </div>
+          </article>
+
+        <!-- N8N CARD 2 -->
+        
+        <article class="n8n-card reveal-up delay-1">
+          <div class="n8n-media">
+
+            <!-- IMAGE ADDED HERE -->
+            <img src="images/Screenshot 2025-08-29 185533.png" alt="Workflow preview" class="n8n-img" />
+
+            <div class="n8n-overlay">
+              <button class="proj-link-btn video-trigger" data-video="n8n-video-1.mp4">
+                ▶ Watch Flow
+              </button>
+            </div>
+
+          </div>
+
+          <div class="n8n-info">
+            <div class="n8n-badge">N8N Workflow</div>
+            <h3>Real-Time Job Application Notification & Reporting System</h3>
+            <p>
+              **Real-Time Job Application Notification & Reporting System**
+
+A smart automation workflow designed to help HR teams stay informed and responsive throughout the hiring process.
+
+The system sends instant Slack notifications whenever a new job application is received, including key applicant details and a direct link to the Google Sheet entry for quick access and follow-up.
+
+It also generates AI-powered daily summaries that categorize applications by job role and provide a clear breakdown of total applications received. These reports are automatically saved to Google Sheets for easy tracking and reference.
+
+By combining real-time alerts with automated reporting, the workflow improves visibility, speeds up response times, and streamlines recruitment management.
+Use Case Impact: HR teams now have instant visibility into new applicants and a daily snapshot of all applications by role. This enables faster, more accurate, and fully automated tracking, reporting, and decision-making.
+
+
+            </p>
+            <div class="n8n-nodes">
+              <span>Webhook</span><span>OpenAI</span><span>Slack</span><span>Gmail</span>
+            </div>
+          </div>
+        </article>
+        <!-- VIDEO MODAL -->
+          <div id="videoModal" class="video-modal">
+            <div class="video-modal-content">
+
+              <span class="close-video">&times;</span>
+
+              <video id="modalVideo" controls>
+                <source src="" type="video/mp4">
+                Your browser does not support video.
+              </video>
+
+            </div>
+          </div>
+        <!-- N8N CARD 3 -->
+        
+        <article class="n8n-card reveal-up delay-1">
+          <div class="n8n-media">
+
+            <!-- IMAGE ADDED HERE -->
+            <img src="images/Screenshot 2026-05-10 073004.png" alt="Workflow preview" class="n8n-img" />
+
+            <div class="n8n-overlay">
+              <button class="proj-link-btn video-trigger" data-video="n8n-video-1.mp4">
+                ▶ Watch Flow
+              </button>
+            </div>
+
+          </div>
+
+          <div class="n8n-info">
+            <div class="n8n-badge">N8N Workflow</div>
+            <h3>AI content marketing system </h3>
+            <p>
+              AI content marketing system.
+              One webhook. One form. A client submits their business details and the system automatically:
+              → Validates and stores their brand profile
+              → Generates a full content strategy with Claude AI
+              → Builds a 30-day content calendar
+              → Writes every post, hook, caption and CTA
+              → Schedules and publishes across Instagram, Twitter and LinkedIn
+              → Pulls analytics and improves itself weekly
+              No manual work after setup. Just results.
+              
+              I build AI systems that run businesses in the background while the owner focuses on growth.
+              If your business is still doing content manually, we need to talk.
+              
+              I am going to be posting a video walkthrough of how it works soon.</p>
+            <div class="n8n-nodes">
+              <span>Webhook</span><span>OpenAI</span><span>Slack</span><span>Gmail</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="certifications section" id="certifications">
+    <div class="container">
+      <div class="section-label reveal-up">Credentials</div>
+      <h2 class="section-title reveal-up delay-1">Certifications</h2>
+      <p class="section-sub reveal-up delay-2">Professional certifications earned across software engineering and AI disciplines.</p>
+
+      <div class="certs-grid" id="certsGrid">
+
+         <!-- CERT 1 -->
+          <div class="cert-card reveal-up delay-1">
+            <div class="cert-img-wrap">
+              <img src="images/Screenshot 2026-05-30 232946.png" alt="Certification 1" class="cert-img">
+            </div>
+            <div class="cert-info">
+              <div class="cert-issuer">Jobberman</div>
+              <h3 class="cert-title">Softskills
+              </h3>
+              <div class="cert-meta">
+                <span class="cert-date">May 2026</span>
+                <span class="cert-badge">Verified</span>
+              </div>
+              <a href="https://drive.google.com/file/d/1c7NIIV8bLiOClxLNvAxTKk6U-hmGTh_A/view?usp=drivesdk" class="cert-link">View Credential ↗</a>
+            </div>
+          </div>
+
+        <div class="cert-card reveal-up delay-2">
+          <div class="cert-img-wrap">
+            <img src="images/Screenshot 2026-05-30 233812.png" alt="Certification 1" class="cert-img">
+          </div>
+          <div class="cert-info">
+            <div class="cert-issuer">Bright Network</div>
+            <h3 class="cert-title">Internship Experience UK 2022</h3>
+            <div class="cert-meta">
+              <span class="cert-date">Credential Id :JYSHQXMWUPFTTK</span>
+              <span class="cert-badge">Verified</span>
+            </div>
+            <a href="https://www.brightnetwork.co.uk/certificates/internship-experience-uk-2022-_jyshqxmwupfttk/" class="cert-link">View Credential ↗</a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up delay-3">
+          <div class="cert-img-wrap">
+            <div class="cert-img-wrap">
+              <img src="images/Screenshot 2026-05-30 233955.png" alt="Certification 1" class="cert-img">
+            </div>
+          </div>
+          <div class="cert-info">
+            <div class="cert-issuer">Sololearn</div>
+            <h3 class="cert-title">Python Core</h3>
+            <div class="cert-meta">
+              <span class="cert-date">Credential Id : CT-HNX3BIBU</span>
+              <span class="cert-badge">Verified</span>
+            </div>
+            <a href="https://www.sololearn.com/certificates/course/en/16279007/1073/landscape/png" class="cert-link">View Credential ↗</a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up delay-1">
+  
+          <div class="cert-img-wrap">
+            <img src="images/Screenshot 2025-07-11 102842.png" 
+                 alt="Huawei Certification" 
+                 class="cert-img">
+          </div>
+        
+          <div class="cert-info">
+            <div class="cert-issuer">Huawei</div>
+        
+            <h3 class="cert-title">
+              Huawei Certified ICT Associate
+            </h3>
+        
+            <div class="cert-meta">
+              <span class="cert-date">
+                Credential ID: 010103901603810042412764636
+              </span>
+              <span class="cert-badge">Verified</span>
+            </div>
+        
+            <a href="https://e.huawei.com/cn/talent/#/ict/cert-rewards"
+               target="_blank"
+               class="cert-link">
+               View Credential ↗
+            </a>
+          </div>
+        
+        </div>
+
+
+        <div class="cert-card reveal-up delay-1">
+  
+          <div class="cert-img-wrap">
+            <img src="images/Screenshot 2026-05-31 000653.png" 
+                 alt="Hua" 
+                 class="cert-img">
+          </div>
+        
+          <div class="cert-info">
+            <div class="cert-issuer">Great Learning</div>
+        
+            <h3 class="cert-title">
+              Introduction to Computer vision
+            </h3>
+        
+            <div class="cert-meta">
+              <span class="cert-date">
+                
+              </span>
+              <span class="cert-badge">Verified</span>
+            </div>
+        
+            <a href="https://drive.google.com/file/d/1dQijD7BfZ74UjGa8ZwZk2-k_xHArftMl/view?usp=drivesdk"
+               target="_blank"
+               class="cert-link">
+               View Credential ↗
+            </a>
+          </div>
+         </div>
+          <div class="cert-card reveal-up delay-1">
+  
+            <div class="cert-img-wrap">
+              <img src="images/Screenshot 2026-05-31 001913.png" 
+                   alt="Hua" 
+                   class="cert-img">
+            </div>
+          
+            <div class="cert-info">
+              <div class="cert-issuer">SkillUp</div>
+          
+              <h3 class="cert-title">
+                n8n Course: Ai Agent Builder
+              </h3>
+          
+              <div class="cert-meta">
+                <span class="cert-date">
+                  Certificate code :8861029
+                </span>
+                <span class="cert-badge">Verified</span>
+              </div>
+          
+              <a href="#"
+                 target="_blank"
+                 class="cert-link">
+                 View Credential ↗
+              </a>
+            </div>
+          
+        
+        </div>
+
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-label reveal-up">Let's Connect</div>
+      <h2 class="section-title reveal-up delay-1">Get In Touch</h2>
+      <p class="section-sub reveal-up delay-2">Open to collaborations, freelance, or just a good conversation about tech and building.</p>
+
+      <div class="contact-grid reveal-up delay-2">
+        <div class="contact-info">
+          <p class="contact-big">Have a project idea, a role in mind, or want to talk systems & AI? Reach out — let's build something worth building.</p>
+          <div class="social-links">
+            <a href="www.linkedin.com/in/oluwatobi-adetomiwa-adedotun-354262230" target="_blank" rel="noopener" class="social-link linkedin-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://www.instagram.com/devyne_me/" target="_blank" rel="noopener" class="social-link instagram-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              Instagram
+            </a>
+          </div>
+          <a href="mailto:adetomiwaoluwatobi45@email.com" class="email-link">adetomiwaoluwatobi45@email.com →</a>
+        </div>
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message ↗</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <span class="footer-logo">OA<span class="dot">.</span></span>
+          <p>Oluwatobi Adetomiwa — Software & AI Engineer</p>
+        </div>
+        <div class="footer-right">
+          <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://instagram.com/your-instagram" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Oluwatobi Adetomiwa. All rights reserved.</span>
+        <span>Built with precision.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- VIDEO MODAL -->
+  <div class="video-modal" id="videoModal">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">✕</button>
+      <video class="modal-video" id="modalVideo" controls></video>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
