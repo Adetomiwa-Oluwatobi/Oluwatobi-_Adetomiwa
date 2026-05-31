@@ -414,6 +414,67 @@ document.querySelectorAll('.project-card, .n8n-card').forEach(card => {
     });
   
   })();
+
+
+  /* ===========================
+   FOUNDER SECTION — LOCAL VIDEO TRIGGERS
+   Add this inside your existing DOMContentLoaded listener in main.js
+   (or just append at the bottom of main.js — it's self-contained)
+   =========================== */
+
+(function () {
+  /**
+   * Revelflow local video cards use .vvideo-local-frame
+   * They tap into the same polished modal from modal-logic.js
+   * via the existing openModal() pattern — we just dispatch a
+   * synthetic click on the data-video attribute.
+   */
+  document.addEventListener('click', function (e) {
+    const frame = e.target.closest('.vvideo-local-frame');
+    if (!frame) return;
+
+    const videoSrc = frame.dataset.video;
+    if (!videoSrc) return;
+
+    // Grab the title from the sibling .vvideo-title
+    const card      = frame.closest('.vvideo-card');
+    const titleText = card ? (card.querySelector('.vvideo-title')?.textContent?.trim() || 'Revelflow') : 'Revelflow';
+
+    // Re-use the same modal already built by modal-logic.js
+    const modal    = document.getElementById('videoModal');
+    const video    = document.getElementById('modalVideo');
+    const loader   = document.getElementById('modalLoader');
+    const nameEl   = document.getElementById('modalProjectName');
+
+    if (!modal || !video) return;
+
+    // Reset + populate
+    loader?.classList.remove('hidden');
+    video.src       = videoSrc;
+    if (nameEl) nameEl.textContent = 'Revelflow — ' + titleText;
+
+    modal.classList.remove('closing');
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+
+    video.load();
+    video.addEventListener('canplay', function onReady() {
+      loader?.classList.add('hidden');
+      video.play().catch(() => {});
+      video.removeEventListener('canplay', onReady);
+    });
+  });
+
+  /* Keyboard accessibility for local video frames */
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const frame = document.activeElement?.closest('.vvideo-local-frame');
+    if (frame) {
+      e.preventDefault();
+      frame.click();
+    }
+  });
+})();
 // ──────────────────────────────
 // INIT LOG
 // ──────────────────────────────
