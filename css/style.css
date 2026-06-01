@@ -1797,6 +1797,186 @@ h1, h2, h3, h4 {
      }
    }
 
+
+   /* ===========================
+   N8N IMAGE ZOOM MODAL
+   Append to style.css
+   =========================== */
+
+/* Update overlay button label */
+.n8n-overlay .proj-link-btn {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* ── Image zoom modal ── */
+.imgzoom-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2100;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgzoom-modal.open {
+  display: flex;
+}
+
+.imgzoom-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  animation: izBackdropIn 0.3s ease forwards;
+}
+
+@keyframes izBackdropIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.imgzoom-shell {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 92vw;
+  max-height: 92vh;
+  animation: izShellIn 0.38s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+}
+
+@keyframes izShellIn {
+  from { opacity: 0; transform: scale(0.93) translateY(16px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Top bar */
+.imgzoom-topbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0.75rem;
+}
+
+.imgzoom-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.38);
+}
+
+.imgzoom-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.65);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.25s;
+  flex-shrink: 0;
+}
+
+.imgzoom-close:hover {
+  background: rgba(232, 97, 0, 0.22);
+  border-color: rgba(232, 97, 0, 0.45);
+  color: #E86100;
+  transform: rotate(90deg);
+}
+
+/* Image frame */
+.imgzoom-frame {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(232, 97, 0, 0.15),
+    0 32px 80px rgba(0,0,0,0.65);
+  position: relative;
+}
+
+/* Orange top accent line */
+.imgzoom-frame::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #E86100, transparent);
+  z-index: 2;
+}
+
+.imgzoom-img {
+  display: block;
+  max-width: 88vw;
+  max-height: 78vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Bottom caption */
+.imgzoom-caption {
+  margin-top: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.imgzoom-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #E86100;
+  animation: pulse 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.imgzoom-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+
+.imgzoom-hint {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.28);
+  letter-spacing: 0.08em;
+  margin-left: auto;
+}
+
+/* Closing animation */
+.imgzoom-modal.closing .imgzoom-shell {
+  animation: izShellOut 0.28s cubic-bezier(0.55, 0, 1, 0.45) forwards;
+}
+.imgzoom-modal.closing .imgzoom-backdrop {
+  animation: izBackdropOut 0.28s ease forwards;
+}
+
+@keyframes izShellOut {
+  from { opacity: 1; transform: scale(1) translateY(0); }
+  to   { opacity: 0; transform: scale(0.95) translateY(12px); }
+}
+@keyframes izBackdropOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@media (max-width: 600px) {
+  .imgzoom-hint { display: none; }
+  .imgzoom-img  { max-width: 96vw; max-height: 72vh; }
+}
+
 /* ===========================
    ACTIVE NAV LINK
    =========================== */

@@ -475,6 +475,101 @@ document.querySelectorAll('.project-card, .n8n-card').forEach(card => {
     }
   });
 })();
+
+/* ===========================
+   N8N IMAGE ZOOM MODAL
+   Append to main.js
+   =========================== */
+
+   (function () {
+
+    /* ── Build modal DOM ── */
+    const modalHTML = `
+      <div class="imgzoom-modal" id="imgZoomModal" role="dialog" aria-modal="true" aria-label="Workflow image preview">
+        <div class="imgzoom-backdrop" id="imgZoomBackdrop"></div>
+        <div class="imgzoom-shell">
+          <div class="imgzoom-topbar">
+            <span class="imgzoom-label">N8N Workflow</span>
+            <button class="imgzoom-close" id="imgZoomClose" aria-label="Close image">✕</button>
+          </div>
+          <div class="imgzoom-frame">
+            <img class="imgzoom-img" id="imgZoomImg" src="" alt="" />
+          </div>
+          <div class="imgzoom-caption">
+            <span class="imgzoom-dot"></span>
+            <span class="imgzoom-title" id="imgZoomTitle"></span>
+            <span class="imgzoom-hint">ESC to close</span>
+          </div>
+        </div>
+      </div>
+    `;
+  
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+  
+    const modal    = document.getElementById('imgZoomModal');
+    const backdrop = document.getElementById('imgZoomBackdrop');
+    const closeBtn = document.getElementById('imgZoomClose');
+    const img      = document.getElementById('imgZoomImg');
+    const titleEl  = document.getElementById('imgZoomTitle');
+  
+    /* ── Open ── */
+    function openZoom(src, title) {
+      img.src        = src;
+      img.alt        = title;
+      titleEl.textContent = title;
+      modal.classList.remove('closing');
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  
+    /* ── Close ── */
+    function closeZoom() {
+      modal.classList.add('closing');
+      setTimeout(() => {
+        modal.classList.remove('open', 'closing');
+        img.src = '';
+        document.body.style.overflow = '';
+      }, 300);
+    }
+  
+    closeBtn.addEventListener('click', closeZoom);
+    backdrop.addEventListener('click', closeZoom);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeZoom();
+    });
+  
+    /* ── Update N8N overlay buttons to trigger image zoom ──
+       Replaces the "▶ Watch Flow" video-trigger behaviour
+       for cards that have an n8n-img (not a video).          */
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.n8n-overlay .proj-link-btn');
+      if (!btn) return;
+  
+      const card = btn.closest('.n8n-card');
+      if (!card) return;
+  
+      const n8nImg = card.querySelector('.n8n-img');
+      if (!n8nImg) return;
+  
+      e.preventDefault();
+      e.stopPropagation(); // don't let the video-trigger handler catch this
+  
+      const src   = n8nImg.src;
+      const title = card.querySelector('h3')?.textContent?.trim() || 'Workflow Preview';
+      openZoom(src, title);
+    });
+  
+    /* ── Also make the image itself clickable ── */
+    document.addEventListener('click', (e) => {
+      const n8nImg = e.target.closest('.n8n-card .n8n-img');
+      if (!n8nImg) return;
+  
+      const card  = n8nImg.closest('.n8n-card');
+      const title = card?.querySelector('h3')?.textContent?.trim() || 'Workflow Preview';
+      openZoom(n8nImg.src, title);
+    });
+  
+  })();
 // ──────────────────────────────
 // INIT LOG
 // ──────────────────────────────
